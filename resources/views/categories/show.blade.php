@@ -1,8 +1,14 @@
-<!-- categories/show.blade.php -->
+@extends('layout')
+
+@section('content')
+
+<div class="flex items-center justify-center my-6">
+  <h1 class="text-4xl font-bold text-center">{{ $category->name }} category Details Page </h1>
+</div>
 
 <div>
   <h3>{{ $category->name }}</h3>
-  <p>{{ $category->description }}</p>
-  <p>Created at: {{ $category->created_at }}</p>
-  <p>Updated at: {{ $category->updated_at }}</p>
 </div>
+
+
+@endsection
