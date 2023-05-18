@@ -21,7 +21,7 @@
 
 
     <main class="w-full mx-auto">
-      <div class="sm:px-4" style="min-height: 66vh;">
+      <div class="" style="min-height: 66vh;">
 
         @yield('content')
       </div>

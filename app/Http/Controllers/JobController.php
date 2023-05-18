@@ -13,7 +13,9 @@ class JobController extends Controller
      */
     public function index()
     {
-        //
+        $jobs = job::all();
+        return view('jobs.index', compact('jobs'));
+
     }
 
     /**
@@ -37,7 +39,7 @@ class JobController extends Controller
      */
     public function show(job $job)
     {
-        //
+        return view('jobs.show', compact('job'));
     }
 
     /**

@@ -1,8 +1,10 @@
 <?php
 
+use App\Models\Job;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LanguageController;
@@ -18,11 +20,8 @@ use App\Http\Controllers\LanguageController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', [
-        'users' => User::all(),
-    ]);
-});
+Route::get('/', [JobController::class, 'index'])->name('jobs.index');
+Route::get('/jobs/{job}', [JobController::class, 'show'])->name('jobs.show');
 
 
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
