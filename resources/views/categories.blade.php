@@ -1,5 +1,6 @@
-<!-- categories.blade.php -->
+@extends('layout')
 
+@section('content')
 @foreach ($categories as $category)
 <div>
   <h3>{{ $category->name }}</h3>
@@ -8,3 +9,5 @@
   <p>Updated at: {{ $category->updated_at }}</p>
 </div>
 @endforeach
+
+@endsection

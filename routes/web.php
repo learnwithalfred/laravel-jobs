@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +21,14 @@ Route::get('/', function () {
 
 Route::get('/categories', function () {
     return view('categories', [
-        'categories' => App\Models\Category::all()
+        'categories' => Category::all()
     ]);
 });
 
-// render categories
+// render categories show
+
+// Route::get('/categories/{category}', function (Category $category) {
+//     return view('categories.show', [
+//         'category' => $category
+//     ]);
+// });
