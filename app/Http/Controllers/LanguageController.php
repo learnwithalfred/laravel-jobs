@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCategoryRequest;
-use App\Http\Requests\UpdateCategoryRequest;
-use App\Models\Category;
+use App\Http\Requests\StoreLanguageRequest;
+use App\Http\Requests\UpdateLanguageRequest;
+use App\Models\Language;
 
-class CategoryController extends Controller
+class LanguageController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        $languages = Language::all();
+        return view('languages.index', compact('languages'));
     }
 
     /**
@@ -22,14 +22,13 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('categories.show', compact('category'));
-
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCategoryRequest $request)
+    public function store(StoreLanguageRequest $request)
     {
         //
     }
@@ -37,16 +36,16 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show(Language $language)
     {
-        return view('categories.show', compact('category'));
+        return view('languages.show', compact('language'));
 
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit(Language $language)
     {
         //
     }
@@ -54,7 +53,7 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(UpdateLanguageRequest $request, Language $language)
     {
         //
     }
@@ -62,7 +61,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Language $language)
     {
         //
     }

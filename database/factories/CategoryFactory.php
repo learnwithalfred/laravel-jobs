@@ -17,9 +17,12 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         $faker = \Faker\Factory::create();
+        $categories = [
+            'Entry Level', 'Junior', 'Intermediate', 'Advanced', 'Expert', 'All Levels', 'Beginner Level',
+        ];
 
         return [
-            'name' => $faker->word,
+            'name' => $this->faker->unique()->randomElement($categories),
             'description' => $faker->sentence
         ];
     }
