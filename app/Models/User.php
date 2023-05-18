@@ -22,6 +22,11 @@ class User extends Authenticatable
     {
         return $this->hasMany(Company::class);
     }
+
+    public function jobs(): HasMany
+    {
+        return $this->hasMany(Job::class);
+    }
     protected $fillable = [
         'name',
         'email',
