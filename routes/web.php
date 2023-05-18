@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LanguageController;
 
@@ -17,7 +19,9 @@ use App\Http\Controllers\LanguageController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'users' => User::all(),
+    ]);
 });
 
 
@@ -26,3 +30,9 @@ Route::get('/categories/{category}', [CategoryController::class, 'show'])->name(
 
 Route::get('/languages', [LanguageController::class, 'index'])->name('languages.index');
 Route::get('/languages/{language}', [LanguageController::class, 'show'])->name('languages.show');
+
+
+// get companies
+
+Route::get('/companies', [CompanyController::class, 'index'])->name('companies.index');
+Route::get('/companies/{company}', [CompanyController::class, 'show'])->name('companies.show');

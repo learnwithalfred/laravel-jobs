@@ -4,7 +4,7 @@
 @include('partials._hero')
 
 
-<div class="sm:px-4" style="min-height: 66vh;">
+<!-- <div class="sm:px-4" style="min-height: 66vh;">
   <div class="mx-auto max-w-3xl p-4 my-8 border border-gray-200 rounded-lg shadow sm:p-8">
     <div class="flex justify-between items-center">
       <h5 class="mb-2 text-4xl font-extrabold text-gray-900">Work fast from anywhere</h5>
@@ -203,8 +203,23 @@
         </span>
       </li>
     </ul>
-  </div>
+  </div> -->
 
+
+<h1>
+  Users
+</h1>
+@foreach ($users as $user)
+<div>
+  <h3>{{ $user->name }}</h3>
+  <h3>{{ $user->id }}</h3>
 </div>
+@endforeach
+
+<h1>
+  Companies
+</h1>
+
+<!-- </div> -->
 
 @endsection
