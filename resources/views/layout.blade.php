@@ -21,8 +21,10 @@
 
 
     <main class="w-full mx-auto">
+      <div class="sm:px-4" style="min-height: 66vh;">
 
-      @yield('content')
+        @yield('content')
+      </div>
 
     </main>
     @include('partials._footer')
